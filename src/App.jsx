@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { Await, BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import ItemListContainer from './components/Navbar/ItemListContainer'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Navbar from './components/Navbar/Navbar.jsx'
 
 function App() {

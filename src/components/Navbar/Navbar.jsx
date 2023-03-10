@@ -1,6 +1,6 @@
 import "./Navbar.css"
 import Button from '@mui/material/Button';
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -8,7 +8,7 @@ const Navbar = () => {
         <nav className="container">
 
             <Link to={'/'}><h1>Malakita</h1></Link>
-            <Button >Inicio</Button>
+            <Link to={'/'}><Button >Inicio</Button></Link>
             <Button >Sobre nosotros</Button>
             <Button >FaQ</Button>
             <Button >Conctacto</Button>
