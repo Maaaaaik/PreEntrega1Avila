@@ -1,12 +1,16 @@
 import styles from "./listContainer.module.css"
-import Card from "../Card/Card"
+import RecipeReviewCard from "../CardV2/CardV2";
 
-const ItemListContainer = ({ productos }) => {
+const ItemListContainer = (props) => {
+    const { productos, onAdd, onRemove } = props;
     return (
         <div className={styles.container}>
             {productos.map((producto) => (
-                <Card key={producto.id} producto={producto} />
+
+                <RecipeReviewCard key={producto.id} onAdd={onAdd} onRemove={onRemove} producto={producto} />
+
             ))}
+
         </div>
 
     );

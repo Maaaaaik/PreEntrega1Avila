@@ -7,4 +7,16 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #74b29f;
+}
+
+h1 {
+  text-align: center;
+  color: '#396f5f';
+}
+
+.TituloYCategoria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,19 +1,22 @@
 import "./Navbar.css"
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 import CartWidget from "../CartWidget/CartWidget";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import MultipleSelect from "../CategoryList/CategoryList";
 
-const Navbar = () => {
+
+const Navbar = ({ cartItems }) => {
     return (
         <nav className="container">
-
-            <Link to={'/'}><h1>Malakita</h1></Link>
-            <Link to={'/'}><Button >Inicio</Button></Link>
-            <Button >Sobre nosotros</Button>
-            <Button >FaQ</Button>
-            <Button >Conctacto</Button>
-            <CartWidget />
-        </nav>
+            <>
+                <Link style={{ textDecoration: 'none' }} to={'/'}><h1>Malakita</h1></Link>
+                <Link style={{ textDecoration: 'none' }} to={'/'}><Button >Inicio</Button></Link>
+                <Button>Sobre Nosotros</Button>
+                <Button>FaQ</Button>
+                <Button>Conctacto</Button>
+                <Link style={{ textDecoration: 'none' }} to={'/cart'}><CartWidget cartItems={cartItems} /></Link>
+            </>
+        </nav >
     )
 }
 

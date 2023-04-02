@@ -1,0 +1,40 @@
+.container {
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+        'title title title'
+        'pic descrip descrip'
+        'pic category rate'
+        'pic price cart';
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    grid-area: title;
+}
+
+img {
+    grid-area: pic;
+
+}
+
+.description {
+    grid-area: descrip;
+}
+
+.button {
+    grid-area: category;
+}
+
+.rating {
+    grid-area: rate;
+}
+
+.price {
+    grid-area: price;
+}
+
+.cart {
+    grid-area: cart;
+}

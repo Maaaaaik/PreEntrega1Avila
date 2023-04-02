@@ -1,17 +1,44 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import styles from "./ItemDetailContainer.module.css"
+import Button from '@mui/material/Button';
+import { Typography } from "@mui/material";
+import BasicRating from "../Rating/Rating";
+import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 
 const ItemDetailContainer = ({ productos }) => {
     const { id } = useParams()
     const producto = productos.find((producto) => producto.id == id)
 
+
     return (
-        <div>
-            <h4>{producto.title}</h4>
-            <img src={producto.image} alt="" width={200} />
-            <h5>{producto.category}</h5>
-            <p>{producto.description}</p>
-            <p>$ {producto.price}</p>
-            <p>rating: {producto.rating.rate}</p>
+        <div className={styles.container}>
+            <h1 className={styles.h1}>{producto.title}</h1>
+
+            <img src={producto.images} alt="" width={500} />
+
+            <div className={styles.description}><Typography sx={{ mr: 2, mb: 2 }} variant='h5' >
+                {producto.description}
+            </Typography></div>
+            <div className={styles.button}><Link style={{ textDecoration: 'none' }} to={"../../category/" + `${producto.category.name}`}>
+                <Button size='medium' variant='outlined' sx={{ borderRadius: 50 }}>
+
+                    {producto.category.name}
+
+                </Button></Link></div>
+            <div className={styles.rating}><BasicRating rating={producto.rating} /></div>
+
+            <div className={styles.price}> <Typography sx={{ mr: 2, mb: 2 }} variant='h4' >
+                {producto.price}
+            </Typography></div>
+
+
+            <div className="cart">
+                <Button sx={{ mb: 2, ml: 1, borderRadius: 50 }} color="primary"
+                    size="medium"
+                    variant="contained" endIcon={<ShoppingCartRoundedIcon />}>
+                    Agregar al carrito
+                </Button>
+            </div>
         </div>
     )
 }
