@@ -1,5 +1,3 @@
-
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Await, BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
@@ -12,6 +10,7 @@ import MultipleSelect from './components/CategoryList/CategoryList'
 import db from "../db/Firebase-config"
 import { collection, getDocs } from 'firebase/firestore'
 import Cart from './components/Cart/Cart'
+import { Divider } from '@mui/material'
 
 
 function App() {
@@ -65,9 +64,9 @@ function App() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: '#529f88',
-        light: '#74b29f',
-        dark: '#396f5f'
+        main: '#396f5f',
+        light: '#608b7f',
+        darker: '#274d42'
       },
     },
     typography: {
@@ -92,14 +91,15 @@ function App() {
           <div className="App">
             <Navbar cartItems={cartItems} />
             <div className='TituloYCategoria'>
-              <h1>Malakita tienda</h1>
+              <h1 className='malakita'>Malakita tienda</h1>
               <MultipleSelect productos={productos} />
 
             </div>
+            <Divider variant="middle" />
             <Routes>
               <Route path='/' element={<ItemListContainer onAdd={onAdd} onRemove={onRemove} productos={productos} />} />
               <Route path='/category/:category' element={<CategoryListContainer productos={productos} />} />
-              <Route path='/item/:id' element={<ItemDetailContainer productos={productos} />} />
+              <Route path='/item/:id' element={<ItemDetailContainer onAdd={onAdd} productos={productos} />} />
               <Route path='/cart' element={<Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />} />
             </Routes>
           </div>

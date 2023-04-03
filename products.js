@@ -3,7 +3,7 @@ const products = [
         title: "Televisor 4K Smart TV Samsung",
         price: 799.99,
         description: "Televisor con resolución 4K, pantalla de 55 pulgadas y conexión a internet",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.5,
         category: {
             name: "tecnologia"
@@ -13,7 +13,7 @@ const products = [
         title: "Camisa de vestir para hombre",
         price: 39.99,
         description: "Camisa de vestir de algodón para hombre en color blanco",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.2,
         category: {
             name: "moda"
@@ -23,7 +23,7 @@ const products = [
         title: "Sofá reclinable de piel",
         price: 1499.99,
         description: "Sofá de piel reclinable con capacidad para tres personas",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.8,
         category: {
             name: "muebles"
@@ -33,7 +33,7 @@ const products = [
         title: "Cámara réflex Nikon",
         price: 899.99,
         description: "Cámara réflex con sensor de 24 megapíxeles y lente de 18-55mm",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.4,
         category: {
             name: "tecnologia"
@@ -43,7 +43,7 @@ const products = [
         title: "Mueble de TV de madera",
         price: 299.99,
         description: "Mueble de TV de madera con espacio de almacenamiento para accesorios",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.6,
         category: {
             name: "muebles"
@@ -53,7 +53,7 @@ const products = [
         title: "Zapatos de cuero para mujer",
         price: 79.99,
         description: "Zapatos de cuero para mujer en color negro",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.1,
         category: {
             name: "moda"
@@ -63,7 +63,7 @@ const products = [
         title: "Mesa de centro de vidrio",
         price: 199.99,
         description: "Mesa de centro de vidrio con marco de metal",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.3,
         category: {
             name: "muebles"
@@ -73,7 +73,7 @@ const products = [
         title: "Altavoz inalámbrico Bluetooth",
         price: 99.99,
         description: "Altavoz inalámbrico Bluetooth con micrófono integrado y batería de larga duración",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.7,
         category: {
             name: "tecnologia"
@@ -83,7 +83,7 @@ const products = [
         title: "Silla de escritorio ergonómica",
         price: 249.99,
         description: "Silla de escritorio ergonómica con soporte lumbar y reposabrazos ajustables",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.9,
         category: {
             name: "muebles"
@@ -93,7 +93,7 @@ const products = [
         title: "Auriculares inalámbricos con cancelación de ruido",
         price: 199.99,
         description: "Auriculares inalámbricos con cancelación de ruido y micrófono integrado",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.3,
         category: {
             name: "tecnologia"
@@ -103,7 +103,7 @@ const products = [
         title: "Lámpara de pie moderna",
         price: 149.99,
         description: "Lámpara de pie con pantalla de tela y base de metal en color negro",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.6,
         category: {
             name: "muebles"
@@ -113,7 +113,7 @@ const products = [
         title: "Chaqueta para hombre",
         price: 89.99,
         description: "Chaqueta de cuero sintético para hombre en color marrón",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.2,
         category: {
             name: "moda"
@@ -123,7 +123,7 @@ const products = [
         title: "Sofá de jardín modular",
         price: 1199.99,
         description: "Sofá de jardín modular con cojines de tela impermeable y estructura de aluminio",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.8,
         category: {
             name: "jardineria"
@@ -133,7 +133,7 @@ const products = [
         title: "Robot aspirador",
         price: 499.99,
         description: "Robot aspirador con mapeo inteligente y función de limpieza programable",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.7,
         category: {
             name: "tecnologia"
@@ -143,7 +143,7 @@ const products = [
         title: "Mesa de comedor extensible",
         price: 799.99,
         description: "Mesa de comedor extensible de madera maciza en color natural",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.5,
         category: {
             name: "muebles"
@@ -153,7 +153,7 @@ const products = [
         title: "Sudadera con capucha para mujer",
         price: 59.99,
         description: "Sudadera con capucha para mujer en color gris oscuro",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.1,
         category: {
             name: "moda"
@@ -163,7 +163,7 @@ const products = [
         title: "Tablet Samsung Galaxy Tab A7",
         price: 299.99,
         description: "Tablet Samsung Galaxy Tab A7 con pantalla de 10.4 pulgadas y 32 GB de almacenamiento interno",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.6,
         category: {
             name: "tecnologia"
@@ -173,7 +173,7 @@ const products = [
         title: "Mesa de centro de cristal",
         price: 149.99,
         description: "Mesa de centro de cristal templado y base de metal cromado",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.4,
         category: {
             name: "muebles"
@@ -183,7 +183,7 @@ const products = [
         title: "Zapatillas deportivas para mujer",
         price: 79.99,
         description: "Zapatillas deportivas para mujer con tecnología de amortiguación de impacto",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.3,
         category: {
             name: "moda"
@@ -193,7 +193,7 @@ const products = [
         title: "Mueble de televisión",
         price: 299.99,
         description: "Mueble de televisión con estantes y puertas de cristal templado",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.7,
         category: {
             name: "muebles"
@@ -203,7 +203,7 @@ const products = [
         title: "Cortacésped eléctrico",
         price: 199.99,
         description: "Cortacésped eléctrico con cuchillas de acero inoxidable y altura de corte ajustable",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.5,
         category: {
             name: "jardineria"
@@ -213,7 +213,7 @@ const products = [
         title: "Cámara réflex digital Canon EOS 90D",
         price: 1199.99,
         description: "Cámara réflex digital Canon EOS 90D con sensor CMOS de 32.5 megapíxeles",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.8,
         category: {
             name: "tecnologia"
@@ -223,7 +223,7 @@ const products = [
         title: "Mesa plegable para exterior",
         price: 99.99,
         description: "Mesa plegable para exterior con superficie de resina y estructura de metal",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.2,
         category: {
             name: "jardineria"
@@ -233,7 +233,7 @@ const products = [
         title: "Silla de comedor",
         price: 79.99,
         description: "Silla de comedor tapizada en tela y patas de madera maciza",
-        images: [],
+        images: "https://api.lorem.space/image?w=400&h=320",
         rating: 4.1,
         category: {
             name: "muebles"

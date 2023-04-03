@@ -5,7 +5,8 @@ import { Typography } from "@mui/material";
 import BasicRating from "../Rating/Rating";
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 
-const ItemDetailContainer = ({ productos }) => {
+const ItemDetailContainer = (props) => {
+    const { productos, onAdd } = props;
     const { id } = useParams()
     const producto = productos.find((producto) => producto.id == id)
 
@@ -33,7 +34,7 @@ const ItemDetailContainer = ({ productos }) => {
 
 
             <div className="cart">
-                <Button sx={{ mb: 2, ml: 1, borderRadius: 50 }} color="primary"
+                <Button onClick={() => onAdd(producto)} sx={{ mb: 2, ml: 1, borderRadius: 50 }} color="primary"
                     size="medium"
                     variant="contained" endIcon={<ShoppingCartRoundedIcon />}>
                     Agregar al carrito

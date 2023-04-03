@@ -7,16 +7,19 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #74b29f;
+  background-color: white;
 }
 
-h1 {
+.malakita {
   text-align: center;
-  color: '#396f5f';
+  color: #274d42;
 }
 
 .TituloYCategoria {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

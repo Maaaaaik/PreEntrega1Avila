@@ -7,14 +7,14 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import { Link } from 'react-router-dom';
-import { useState } from 'react'
+import styles from "./CardV2.module.css";
 
 const MediaCard = (props) => {
     const { producto, onAdd } = props;
 
     return (
 
-        <Card color='primary-light' sx={{ maxWidth: 350 }}>
+        <Card color='primary-light' sx={{ minWidth: 350, maxWidth: 350 }}>
             <Link style={{ textDecoration: 'none' }} to={"../../item/" + `${producto.id}`}>
                 <CardMedia sx={{ height: 250 }}
                     image={producto.images}
@@ -22,7 +22,7 @@ const MediaCard = (props) => {
                 />
             </Link >
             <CardContent>
-                <Typography sx={{ pb: 1 }} gutterBottom variant="h5" component="div">
+                <Typography sx={{ pb: 1, height: 64 }} gutterBottom variant="h5" component="div">
                     {producto.title}
                 </Typography>
                 <Link style={{ textDecoration: 'none' }} to={"../../category/" + `${producto.category.name}`}>
@@ -41,7 +41,7 @@ const MediaCard = (props) => {
                     variant="contained" endIcon={<ShoppingCartRoundedIcon />}>
                     Agregar al carrito
                 </Button>
-                <Typography sx={{ mr: 2, mb: 2 }} variant='h4' >
+                <Typography sx={{ fontSize: 20, mr: 2, mb: 2 }} variant='h5' >
                     ${producto.price}
                 </Typography>
 

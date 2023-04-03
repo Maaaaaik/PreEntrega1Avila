@@ -22,15 +22,15 @@ export default function Cart(props) {
     return (
         <div className={styles.container}>
             <h2>Carrito</h2>
-            <div>
+            <div className={styles.cart}>
                 {cartItems.length === 0 && <div>El carrito esta vacio</div>}
                 {cartItems.map((item) => (
 
-                    <div key={item.id} className="row">
-                        <List sx={{ width: '60%', bgcolor: '#74b29f' }}>
+                    <div key={item.id} className={styles.lista}>
+                        <List sx={{ bgcolor: 'white' }}>
                             <ListItem alignItems="flex-start">
                                 <ListItemAvatar>
-                                    <Avatar alt="imagen de producto" src={item.image} />
+                                    <Avatar alt="imagen de producto" src={item.images} />
                                 </ListItemAvatar>
                                 <ListItemText
                                     primary={item.title}
@@ -49,6 +49,7 @@ export default function Cart(props) {
                                                 <Button className="bottonOnAdd" color='primary' sx={{ backgroundColor: '#396f5f', borderRadius: 50 }} variant='filled' onClick={() => onAdd(item)}>
                                                     +
                                                 </Button>
+
                                                 <Button className="bottonOnRemove" color='primary' sx={{ backgroundColor: '#396f5f', borderRadius: 50 }} variant='filled' onClick={() => onRemove(item)}>
                                                     -
                                                 </Button>
@@ -59,7 +60,9 @@ export default function Cart(props) {
                             </ListItem>
                             <Divider variant="inset" component="li" />
                         </List>
+                        <Divider orientation="vertical" variant="middle" flexItem />
                     </div>
+
                 ))}
                 <div className={styles.chekout}>
                     {cartItems.length !== 0 && (
@@ -90,9 +93,6 @@ export default function Cart(props) {
                                         secondary={totalPrice.toFixed(2)}
                                     />
                                 </ListItem>
-                                <Button color='secondary' variant='filled' onClick={() => alert('Compra realizada con exito!')}>
-                                    Realizar compra
-                                </Button>
                             </List>
 
 

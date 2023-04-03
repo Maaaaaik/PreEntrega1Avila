@@ -5,8 +5,8 @@ export const theme = createTheme({
         palette: {
             primary: {
                 main: '#529f88',
-                light: '#74b29f',
-                dark: '#396f5f'
+                light: '#396f5f',
+                dark: '#74b29f'
             },
         },
         typography: {

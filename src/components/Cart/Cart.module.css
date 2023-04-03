@@ -1,12 +1,21 @@
-.bottonOnAdd {
-    color: red;
+.cart {
+    display: flex;
+    flex-direction: column;
 }
 
 .chekout {
     display: flex;
+    margin: 100px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .container {
     text-align: center;
+}
+
+.lista {
+    align-self: center;
 }
