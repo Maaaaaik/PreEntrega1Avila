@@ -3,8 +3,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
-import db from "/db/Firebase-config.js";
-import { collection, addDoc } from "firebase/firestore";
+
 
 
 
@@ -54,7 +53,7 @@ function Confirm() {
                         autoComplete="Repetir Email"
                     />
                 </Grid>
-                <Button onClick={() => alert("Compra realizada con exito")} sx={{ m: 2, mt: 3, backgroundColor: "#396f5f" }} variant='filled' >
+                <Button onClick={() => alert("Compra realizada con exito")} sx={{ m: 2, mt: 3 }} variant='contained' >
                     Realizar compra
                 </Button>
             </Grid>

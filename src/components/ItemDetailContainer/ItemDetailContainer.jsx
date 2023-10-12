@@ -8,28 +8,28 @@ import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 const ItemDetailContainer = (props) => {
     const { productos, onAdd } = props;
     const { id } = useParams()
-    const producto = productos.find((producto) => producto.id == id)
+    const producto = productos.find((producto) => producto._id == id)
 
 
     return (
         <div className={styles.container}>
             <h1 className={styles.h1}>{producto.title}</h1>
 
-            <img src={producto.images} alt="" width={500} />
+            <img src={producto.thumbnail} alt="" width={500} />
 
             <div className={styles.description}><Typography sx={{ mr: 2, mb: 2 }} variant='h5' >
                 {producto.description}
             </Typography></div>
-            <div className={styles.button}><Link style={{ textDecoration: 'none' }} to={"../../category/" + `${producto.category.name}`}>
+            <div className={styles.button}><Link style={{ textDecoration: 'none' }} to={"../../category/" + `${producto.category}`}>
                 <Button size='medium' variant='outlined' sx={{ borderRadius: 50 }}>
 
-                    {producto.category.name}
+                    {producto.category}
 
                 </Button></Link></div>
             <div className={styles.rating}><BasicRating rating={producto.rating} /></div>
 
             <div className={styles.price}> <Typography sx={{ mr: 2, mb: 2 }} variant='h4' >
-                {producto.price}
+                ${producto.price}
             </Typography></div>
 
 

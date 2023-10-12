@@ -10,6 +10,8 @@ import { CardActions } from '@mui/material';
 import Button from '@mui/material/Button';
 import Confirm from '../Confirm/Confirm';
 import styles from "./Cart.module.css"
+import Box from '@mui/material/Box';
+
 
 export default function Cart(props) {
     const { cartItems, onAdd, onRemove } = props;
@@ -18,42 +20,44 @@ export default function Cart(props) {
     const shippingPrice = itemsPrice > 2000 ? 0 : 20;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
-
     return (
+
         <div className={styles.container}>
             <h2>Carrito</h2>
             <div className={styles.cart}>
                 {cartItems.length === 0 && <div>El carrito esta vacio</div>}
                 {cartItems.map((item) => (
 
-                    <div key={item.id} className={styles.lista}>
+                    <div key={item._id} className={styles.lista}>
                         <List sx={{ bgcolor: 'white' }}>
                             <ListItem alignItems="flex-start">
                                 <ListItemAvatar>
-                                    <Avatar alt="imagen de producto" src={item.images} />
+                                    <Avatar alt="item" src={item.thumbnail} />
                                 </ListItemAvatar>
                                 <ListItemText
                                     primary={item.title}
                                     secondary={
                                         <React.Fragment>
                                             <Typography
-                                                sx={{ display: 'inline' }}
+                                                sx={{ display: 'inline', fontSize: '1.2rem' }}
                                                 component="span"
                                                 variant="body2"
                                                 color="text.primary"
                                             >
                                                 {item.description}
                                             </Typography>
-                                            <Typography sx={{ mt: 3 }}>{item.qty} x ${item.price}</Typography>
-                                            <CardActions sx={{ justifyContent: 'right' }}>
-                                                <Button className="bottonOnAdd" color='primary' sx={{ backgroundColor: '#396f5f', borderRadius: 50 }} variant='filled' onClick={() => onAdd(item)}>
-                                                    +
-                                                </Button>
+                                            <Box component="div" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} >
+                                                <Typography sx={{ fontSize: '1.5rem' }}> <strong>{item.qty}</strong> x ${item.price}</Typography>
+                                                <CardActions >
+                                                    <Button className={styles.boton} color='primary' sx={{ borderRadius: 50, minWidth: '0px' }} variant='contained' onClick={() => onRemove(item)}>
+                                                        -
+                                                    </Button >
+                                                    <Typography className={styles.cantidad} sx={{ mt: 3 }}>  {item.qty}  </Typography>
+                                                    <Button className={styles.boton} color='primary' sx={{ borderRadius: 50, ml: '0%', minWidth: '0px' }} style={{ margin: 0 }} variant='contained' onClick={() => onAdd(item)}>
+                                                        +
+                                                    </Button>
+                                                </CardActions></Box>
 
-                                                <Button className="bottonOnRemove" color='primary' sx={{ backgroundColor: '#396f5f', borderRadius: 50 }} variant='filled' onClick={() => onRemove(item)}>
-                                                    -
-                                                </Button>
-                                            </CardActions>
                                         </React.Fragment>
                                     }
                                 />
@@ -67,7 +71,7 @@ export default function Cart(props) {
                 <div className={styles.chekout}>
                     {cartItems.length !== 0 && (
                         <>
-                            <List sx={{ minWidth: 300 }} >
+                            <List sx={{ minWidth: 30 }}>
 
                                 <ListItem>
                                     <ListItemText
